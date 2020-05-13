@@ -4,11 +4,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+h2{
+  position: static;
+  color: aliceblue;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  width: 100vw;
+  padding: 20px 20px;
+}
 body{
   background-image: url("https://s2.glbimg.com/mYAlgn4QljfDj1_UKCOez0qlKYA=/e.glbimg.com/og/ed/f/original/2015/03/04/15024000411_08f38347c7_k.jpg");
   background-size: auto 100vh;
+  background-repeat: round;
   font-family: Arial;
   height: 100vh;
+  height:100%;
   font-size: 15px;
 }
 /*breakpoint*/
@@ -86,4 +98,9 @@ a:hover {
 .img-portfolio{
     height: 180px;
     width: 180px;
+}
+.Mercurio{
+  font-family: cursive;
+  font-weight: bold;
+  color: aliceblue;
 }
