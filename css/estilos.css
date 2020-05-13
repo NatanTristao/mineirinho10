@@ -19,7 +19,6 @@ body{
   background-size: auto 100vh;
   background-repeat: round;
   font-family: Arial;
-  height: 100vh;
   height:100%;
   font-size: 15px;
 }
@@ -60,7 +59,6 @@ header{
     align-items: center;
 }
 .menu{
-  
   position: fixed;
   width: 100vw;
   top: 0;
@@ -98,9 +96,4 @@ a:hover {
 .img-portfolio{
     height: 180px;
     width: 180px;
-}
-.Mercurio{
-  font-family: cursive;
-  font-weight: bold;
-  color: aliceblue;
 }
