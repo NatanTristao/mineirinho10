@@ -6,40 +6,103 @@
     <title>Natan Feijó Tristão</title>
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="sortcut icon" href="https://a-static.mlcdn.com.br/618x463/enfeite-de-mesa-letra-n-12cm-x-18mm-madeira-mdf-palacio-da-arte/palacio-da-arte/14108/2c2fdfec7ee662939422fa2ef39ad237.jpg" type="image/jpg"/>;
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Unkempt&family=VT323&display=swap" rel="stylesheet">
+  </head>
 <body>
+  <script src="https://kit.fontawesome.com/04b59efc54.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/04b59efc54.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/04b59efc54.js" crossorigin="anonymous"></script>
     <header>
         <nav class = "menu">
-          <ul>
-            <li><a href="#">Sobre</a></li>
-              <li><a href="#">Portifólio</a></li>
-            <li><a href="#">Contato</a></li>
+          <ul class="container">
+            <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#portifolio">Planetas</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
-        <div>
+        <div class = "titulo">
         <h1 class = "site-title">Natan Feijó Tristão</h1>
         <h2 class = "site-subtitle">jr. Back-end developer</h2>
         </div>
     </header>
-    <section>
+    <section class="sobre container" id="sobre">
+        <h2>Sobre</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Doloremque minus quia voluptate dolore non totam omnis magni nihil possimus, quam, saepe ut quae, at aperiam tenetur. Assumenda ipsa minus animi.
+        </p>
+
+       <p>
+        Fugit doloremque alias, nesciunt quas vero, molestiae, minima accusantium tempore non consequuntur aliquid. 
+        Ex accusantium ea minus doloremque reiciendis exercitationem delectus expedita ipsa fugiat voluptatem, suscipit, explicabo, iure harum alias?
+       </p>
+
+        <p>
+          Fugiat, exercitationem debitis nesciunt necessitatibus sunt consequuntur, accusamus saepe ea veritatis temporibus dolorum cum?
+        Veniam voluptas, facilis illum placeat iure recusandae perspiciatis repellendus explicabo assumenda consequatur. Consequatur natus quas illum?
+        </p>
+        
+        <p>
+          Este site foi construído durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura</a> 
+        </p>
+
+    </section>
+    <section class = "planetas container" id="portifolio">
         <h2>Planetas do Sistema Solar</h2>
-        <figure>
-          <img class="img-portfolio" src="./img/kisspng-mercury-atmosphere-planet-solar-system-earth-5b31de4c0d2256.2649504115299948280538.png" alt="Mercurio" 
-          class = "Mercurio">
-          <figcaption>Mercúrio</figcaption>
-        </figure>
-        <figure>
-          <img class="img-portfolio" src="./img/pngflow.com.png" alt=">Mobile">
-          <figcaption>Vênus</figcaption>
-        </figure>
-        <figure>
-          <img class="img-portfolio" src="./img/" alt="Web design">
-          <figcaption>Web design</figcaption>
-        </figure>
-        <figure>
-          <img class="img-portfolio" src="./img/" alt="Projetos pessoais">
-          <figcaption>Projetos pessoais</figcaption>
-        </figure>
+        <div class="grid mercurio">
+          <div class="flip-card">
+            <div class="card">
+              <figure class="card-front">
+              <img class="img-portfolio" src="./img/kisspng-mercury-atmosphere-planet-solar-system-earth-5b31de4c0d2256.2649504115299948280538.png" alt="Mercurio" class = "mercurio">
+              <figcaption><a href="https://www.todamateria.com.br/planeta-mercurio/">Mercúrio</a></figcaption>
+              </figure>
+                <div class="card-back">
+                   
+                </div>
+            </div>
+          </div>
+          <figure>
+            <img class="img-portfolio" src="./img/pngflow.com.png" alt=">Venus">
+            <figcaption><a href="https://www.todamateria.com.br/planeta-venus/">Vênus</a></figcaption>
+          </figure>
+          <figure>
+            <img class="img-portfolio" src="./img/pngflow.com (7).png" alt="Terra">
+            <figcaption><a href="https://www.todamateria.com.br/planeta-terra/">Terra</a></figcaption>
+          </figure>
+          <figure>
+            <img class="img-portfolio" src="./img/pngflow.com (2).png" alt="Marte">
+            <figcaption><a href="https://www.todamateria.com.br/planeta-marte/">Marte</a></figcaption>
+          </figure>
+          <figure>
+            <img class="img-portfolio" src="./img/pngflow.com (3).png" alt="Jupiter">
+            <figcaption><a href="https://www.todamateria.com.br/planeta-jupiter/">Jupiter</a></figcaption>
+          </figure>
+          <figure>
+            <img class="img-portfolio" src="./img/kisspng-saturn-planet-solar-system-clip-art-saturn-5adf879df104e1.1296566415245986859872.png" alt="Saturno">
+            <figcaption><a href="https://www.todamateria.com.br/planeta-saturno/">Saturno</a></figcaption>
+          </figure>
+          <figure>
+            <img class="img-portfolio" src="./img/pngflow.com (5).png" alt="Urano">
+            <figcaption><a href="https://www.todamateria.com.br/planeta-urano/">Urano</a></figcaption>
+          </figure>
+          <figure>
+            <img class="img-portfolio" src="./img/pngflow.com (6).png" alt="Netuno">
+            <figcaption><a href="https://www.todamateria.com.br/planeta-netuno/">Netuno</a></figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="contato container" id="contato">
+        <h2>Contato</h2>
+        <div class="grid icons">
+          <a target="_blank" href="https://github.com/NatanTristao">
+            <i class="fab fa-github"></i>
+          </a>
+          <a target="_blank" href="https://instagram.com/natantristao">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a target="_blank" href="https://m.facebook.com/natan.tristao.7">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+        </div>
       </section>
 </body>
 </html>

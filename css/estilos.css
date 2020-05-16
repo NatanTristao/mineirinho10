@@ -4,64 +4,111 @@
     padding: 0;
     box-sizing: border-box;
 }
-h2{
-  position: static;
-  color: aliceblue;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  justify-content: space-around;
-  width: 100vw;
-  padding: 20px 20px;
-}
 body{
   background-image: url("https://s2.glbimg.com/mYAlgn4QljfDj1_UKCOez0qlKYA=/e.glbimg.com/og/ed/f/original/2015/03/04/15024000411_08f38347c7_k.jpg");
   background-size: auto 100vh;
   background-repeat: round;
-  font-family: Arial;
-  height:100%;
+  font-family: "Source Code Pro", monospace;
+  height:100vh;
   font-size: 15px;
 }
+.sobre,
+.contato,
+.planetas{
+  padding: 3em;
+  min-height: 100vh;
+}
+@media(min-width: 1200px){
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  }
+}
+.sobre h2,
+.contato h2,
+.planetas h2{
+  color: aliceblue;
+  font-weight: bold;
+  font-family: 'VT323', monospace;
+  margin-bottom: 1.6em;
+  font-size: 3em;
+}
+.planetas h2{
+  margin-bottom: 2em;
+}
+.sobre p{
+  color:whitesmoke;
+  margin-bottom: 1.4em;
+  text-indent: 1.4em;
+  text-align: justify;
+  font-size: 1.5em;
+}
+.mercurio a,
+.sobre a{
+  color: whitesmoke;
+  text-decoration:underline;
+}
+.mercurio a:hover,
+.sobre a:hover{
+  background-color: black;
+  text-decoration: none;
+}
+/*.sobre .avatar{
+  margin-left: 2em;
+  clip-path: polygon(100% 0%, 100% 52%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+.sobre .avatar img{
+  margin-left: 2em;
+  font-size: 10px;
+  margin-bottom: 2em;
+  clip-path: polygon(100% 0%, 100% 57%, 100% 57%, 51% 100%, 0 57%, 0 0);
+}
+@media (min-width:600px){
+  .sobre .avatar img{
+    float: right;
+    clip-path: polygon(100% 0%, 100% 52%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+      }
+  }*/
 /*breakpoint*/
 @media (min-width:300px){
-    body{
-        font-size: 25x;
-        background-image: url("https://staticr1.blastingcdn.com/media/photogallery/2017/10/28/660x290/b_502x220/representacao-artistica-do-sistema-solar_1660011.jpg");
-        background-size: auto 100vh;
+body{
+  font-size: 25x;
+  background-size: auto 100vh;
     }
 }
 /*se a tela tiver pelo menos 400px vai carregar estes estilos*/
-@media (min-width:500px){
-    body{
-        font-size: 20x;
-        background-image: url("https://1.bp.blogspot.com/-Q8WCWGg57Qk/Wws2e6Po_5I/AAAAAAAAZiw/4Ar_0tJdtoUsOqlf4zleJ7dPHgatJ-LUgCK4BGAYYCw/s640/androhead2.jpg");
-        background-size: auto 100vh;
-    }
-}
-/*breakpoint*/
-@media (min-width:700px){
-    body{
-        font-size: 25x;
-        background-image: url("https://s2.glbimg.com/mYAlgn4QljfDj1_UKCOez0qlKYA=/e.glbimg.com/og/ed/f/original/2015/03/04/15024000411_08f38347c7_k.jpg");
+@media (min-width:400px){
+body{
+  font-size: 20x;
   background-size: auto 100vh;
     }
 }
 /*breakpoint*/
+@media (min-width:600px){
+body{
+  font-size: 25x;
+  background-size: cover;
+  background-attachment: fixed;
+    }
+}
+/*breakpoint*/
 @media (min-width:1200px){
-    body{
-        font-size: 30x;
+body{
+  font-size: 30x;
     }
 }
 header{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .menu{
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
 .menu li {
   list-style:none;
@@ -71,9 +118,15 @@ header{
   justify-content: space-around;
 }
 .menu a{
-    display: block;
-    padding: 10px 20px;
-    color: white;
+  color: whitesmoke;
+  display: block;
+  padding: 10px 20px;
+  transition:background-color 1s, color 1s;
+}
+.menu a:active,
+.menu a:hover{
+  background-color: black;
+  color: whitesmoke;
 }
 a {
   color:teal;
@@ -82,18 +135,116 @@ a {
 a:hover {
   text-decoration: underline;
 }
+.titulo{
+  transform: scale(0.2) translate(50vh);
+  opacity: 0;
+  animation:animacaoTitulo 20s infinite alternate;
+}
+@keyframes animacaoTitulo{
+  0%{
+    transform: scale(0.2) translate(50vh);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1) translate(0);
+    opacity: 1;
+  }
+  from{transform: rotateY(0deg);}
+  to{transform: rotateY(720deg);}
+}
 .site-subtitle,
 .site-title{
   color: whitesmoke;
   text-align: center;
 }
 .site-title{
-    font-size: 3em;
+  font-size: 4em;
+  font-family: 'Special Elite', cursive;
 }
 .site-subtitle{
   font-style: italic;
+  font-family: 'Unkempt', cursive;
+  line-height: 1.8em;
+}
+.planetas .mercurio{
+  color: whitesmoke;
+  font-size: 15px;
+  padding: 3em;
+  height: 2em;
+  font-family: Arial;
+  margin-bottom: 1.8em;
+  font-weight: bold;
+  display: flex;
+}
+.planetas .grid{
+  display: grid;
+  gap: 2em;
+}
+@media(min-width: 560px){
+.planetas .grid{
+  grid-template-columns: 240px 240px;
+  }
+}
+@media(min-width: 880px){
+.planetas .grid{
+  grid-template-columns: repeat(3, 260px);
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - 8em - 48px);
+  }
+}
+@media(min-width: 1200px){
+  .planetas .grid{
+    grid-template-columns: repeat(4, 260px);
+    justify-content: center;
+  }
+}
+.planetas figure{
+  text-align: center;
 }
 .img-portfolio{
-    height: 180px;
-    width: 180px;
+  height: 240px;
+  width: 240px;
+  object-fit: cover;
+  transition: transform 500ms;
+}
+.img-portfolio:hover{
+  transform: scale(1.1);
+}
+/*.flip-card{
+  perspective: 500px;
+}
+.card{
+  position: relative;
+  transform-style:preserve-3d;
+  transition: transform 3s;
+}
+.flip-card:hover .card{
+  transform: rotateY(180deg);
+}
+.card-front,
+.card-back{
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card-back{
+  background-color: black;
+  height: 240px;
+  width: 240px;
+  transform: rotateY(180deg);
+}*/
+.contato .icons{
+  text-align: center;
+}
+.contato a{
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 1s;
+}
+.contato a:active,
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
 }
